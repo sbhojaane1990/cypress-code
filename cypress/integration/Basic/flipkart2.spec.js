@@ -1,7 +1,7 @@
 describe('verify the funcality of flipkart', () => {
-    Cypress.on('uncaught:exception', (err, runnable) => {
-    return false
-});
+//     Cypress.on('uncaught:exception', (err, runnable) => {
+//     return false
+// });
     it('verify the flipkart product', () => {
         cy.visit(' https://www.flipkart.com/');
         cy.get('input[type="text"]').type('iphone{enter}');

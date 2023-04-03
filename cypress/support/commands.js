@@ -23,3 +23,17 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+//import 'cypress-file-upload';
+import 'cypress-file-upload';
+
+Cypress.Commands.add('login', (email, password) => {
+    cy.visit('https://admin-demo.nopcommerce.com/login')
+  const aa=cy.get('input[name=Email]')
+  aa.clear()
+  aa.type(email)
+    const bb= cy.get('input[name=Password]')
+    bb.clear()
+    bb.type(password)
+
+    cy.get('[type="submit"]').click()
+ })
